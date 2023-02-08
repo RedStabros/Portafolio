@@ -41,6 +41,7 @@ module.exports = {
       orange: colors.orange,
       red: colors.red,
       green: colors.green,
+      yellow: colors.yellow,
     },
     fontFamily: {
       kanit: ["Kanit", ...defaultTheme.fontFamily.sans],
@@ -63,8 +64,8 @@ module.exports = {
           "100%": {
             transform: "translate(0px, 0px) scale(1)",
           },
-        }
-      }
+        },
+      },
     },
     plugins: [],
   },

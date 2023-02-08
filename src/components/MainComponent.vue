@@ -11,11 +11,15 @@ defineProps<{
 
 <template>
   <div class="space-y-8">
-    <h1 class="font-bold text-primary-800 dark:text-primary-100 text-5xl capitalize">{{ msg }}</h1>
+    <h1
+      class="font-bold text-primary-800 dark:text-primary-100 text-5xl capitalize"
+    >
+      {{ msg }}
+    </h1>
     <h3
       class="text-primary-900 pt-8 pb-4 font-bold text-3xl dark:text-primary-50 capitalize"
     >
-    digital portfolio
+      digital portfolio
     </h3>
     <a
       href="#"
@@ -35,9 +39,9 @@ defineProps<{
   <div class="text-primary-900 pt-8 space-y-4 capitalize dark:text-primary-100">
     <h1>¿who I am?</h1>
     <p class="w-1/2 text-justify mx-auto pb-2">
-      Passionate about technology, with experience of more than 10 years in hardware, 
-      I jumped to programming, I am currently working on Frontend, using VueJs and tailwind, 
-      becoming passionate about web development
+      Passionate about technology, with experience of more than 10 years in
+      hardware, I jumped to programming, I am currently working on Frontend,
+      using VueJs and tailwind, becoming passionate about web development
     </p>
   </div>
   <skills />

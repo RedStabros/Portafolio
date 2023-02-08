@@ -1,6 +1,12 @@
 <template>
-  <div class="container border-t border-gray-800 dark:border-gray-300 mt-4 border-b pb-8">
-    <h2 class="mt-8 text-primary-600 text-4xl relative dark:text-primary-400 font-bold">Contact and Links</h2>
+  <div
+    class="container border-t border-gray-800 dark:border-gray-300 mt-4 border-b pb-8"
+  >
+    <h2
+      class="mt-8 text-primary-600 text-4xl relative dark:text-primary-400 font-bold"
+    >
+      Contact and Links
+    </h2>
     <div class="">
       <p class="mt-6 text-primary-800 dark:text-primary-100">
         Phone: <br />
@@ -14,6 +20,23 @@
         English Level: <br />
         https://www.efset.org/cert/uix5px <br />
       </p>
+      <div class="justify-evenly flex mt-16">
+        <svg-icon type="mdi" :path="mdiGmail" class="w-10 h-10"></svg-icon>
+        <svg-icon type="mdi" :path="mdiGithub" class="w-10 h-10"></svg-icon>
+        <svg-icon type="mdi" :path="mdiLinkedin" class="w-10 h-10"></svg-icon>
+        <svg-icon type="mdi" :path="mdiFacebook" class="w-10 h-10"></svg-icon>
+        <svg-icon type="mdi" :path="mdiWhatsapp" class="w-10 h-10"></svg-icon>
+      </div>
     </div>
-  </div>
+  </div>  
 </template>
+
+<script setup>
+//icons
+import SvgIcon from '@jamescoyle/vue-icon';
+import { mdiGithub } from '@mdi/js'
+import { mdiLinkedin } from '@mdi/js'
+import { mdiWhatsapp } from '@mdi/js'
+import { mdiGmail } from '@mdi/js'
+import { mdiFacebook } from '@mdi/js'
+</script>
