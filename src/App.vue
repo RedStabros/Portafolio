@@ -2,6 +2,9 @@
 import { RouterLink, RouterView } from "vue-router";
 import MainComponent from "./components/MainComponent.vue";
 
+import SvgIcon from "@jamescoyle/vue-icon";
+import { mdiHeartCircleOutline } from "@mdi/js";
+
 defineProps<{
   msg: string;
 }>();
@@ -13,10 +16,12 @@ const changeDarkMode = () => {
 
 <template>
   <main
-    class="text-center h-full w-full px-8 pt-16 pb-4 bg-secondary-600 dark:bg-primary-100 relative"
+    class="text-center h-full w-full px-8 pt-16 pb-4 bg-secondary-600 dark:bg-primary-100 relative items-center justify-center"
   >
     <div class="flex justify-between">
-      <div class="text-primary-300 left-14 top-4 absolute text-2xl">
+      <div
+        class="text-primary-300 dark:text-primary-600 left-14 top-4 absolute text-2xl"
+      >
         &lt; MauroSG />
       </div>
       <button
@@ -27,13 +32,26 @@ const changeDarkMode = () => {
       </button>
     </div>
     <div
-      class="text-center h-full w-full px-8 py-16 bg-primary-100 dark:bg-secondary-500 rounded-md"
+      class="bg-primary-600 dark:bg-red-800 rounded-md -inset-0.5 absolute mx-8 mt-16 mb-4 blur"
+    ></div>
+    <div
+      class="relative text-center h-full w-full px-8 py-16 bg-primary-100 dark:bg-secondary-500 rounded-md"
     >
       <MainComponent msg="< MauroSG />" />
       <RouterView />
     </div>
   </main>
-  <footer class="bg-secondary-600 dark:bg-primary-100 text-white text-center pb-4">
-    <p class="">With love from Colombia © 2023</p>
+  <footer
+    class="bg-secondary-600 dark:bg-primary-100 text-white text-center pb-4 dark:text-secondary-500 flex items-center justify-center"
+  >
+    <p class="flex items-center justify-center">
+      From Colombia with love
+      <svg-icon
+        type="mdi"
+        :path="mdiHeartCircleOutline"
+        class="w-5 h-5 ml-4 mt-1 hover:text-red-700 text-red-400 transition-all cursor-pointer duration-300 hover:animate-ping mr-3"
+      />
+        © 2023
+    </p>
   </footer>
 </template>

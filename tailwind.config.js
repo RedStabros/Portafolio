@@ -46,6 +46,10 @@ module.exports = {
     fontFamily: {
       kanit: ["Kanit", ...defaultTheme.fontFamily.sans],
     },
+    screens: {
+      'xs': '475px',
+      ...defaultTheme.screens,
+    },
     extend: {
       animation: {
         blob: "blob 8s infinite",
