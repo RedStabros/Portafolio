@@ -72,7 +72,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 //icons
 import SvgIcon from "@jamescoyle/vue-icon";
 import { mdiGithub } from "@mdi/js";
